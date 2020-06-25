@@ -7,52 +7,52 @@
 //$('#photo').attr('src',data.photo)
 
 let imagesData = [{
-        photo: '/pic-creation.jpg',
+        photo: 'pic-creation.jpg',
         title: 'My title',
         description: 'Why is this a very good image'
     },
     {
-        photo: '/pic-beachCity.jpg',
+        photo: 'pic-beachCity.jpg',
         title: 'My title',
         description: 'Why is this a very good image'
     },
     {
-        photo: '/pic-beachPath.jpg',
+        photo: 'pic-beachPath.jpg',
         title: 'My title',
         description: 'Why is this a very good image'
     },
     {
-        photo: '/pic-beachWaves.jpg',
+        photo: 'pic-beachWaves.jpg',
         title: 'My title',
         description: 'Why is this a very good image'
     },
     {
-        photo: '/pic-butterflies.jpeg',
+        photo: 'pic-butterflies.jpeg',
         title: 'My title',
         description: 'Why is this a very good image'
     },
     {
-        photo: '/pic-fantasyWinter.jpg',
+        photo: 'pic-fantasyWinter.jpg',
         title: 'My title',
         description: 'Why is this a very good image'
     },
     {
-        photo: '/pic-flowersPath.jpg',
+        photo: 'pic-flowersPath.jpg',
         title: 'My title',
         description: 'Why is this a very good image'
     },
     {
-        photo: '/pic-islands.jpg',
+        photo: 'pic-islands.jpg',
         title: 'My title',
         description: 'Why is this a very good image'
     },
     {
-        photo: '/pic-lake.jpeg',
+        photo: 'pic-lake.jpeg',
         title: 'My title',
         description: 'Why is this a very good image'
     },
     {
-        photo: '/pic-roadByLake.jpg',
+        photo: 'pic-roadByLake.jpg',
         title: 'My title',
         description: 'Why is this a very good image'
     }

@@ -1,11 +1,3 @@
-/*let data = {
-    photo: '/images/pic-creation.jpg', 
-    title: 'My title',
-    description: 'Why is this a very good image'
-}
-*/
-//$('#photo').attr('src',data.photo)
-
 let imagesData = [{
         photo: 'pic-creation.jpg',
         title: 'My title',
@@ -59,7 +51,7 @@ let imagesData = [{
 ]
 
 let currentPhoto = 0;
-$('#photo').attr('src', imagesData[currentPhoto].photo);
+
 
 function loadPhoto(photoNumber) {
     $('#photo').attr('src', imagesData[photoNumber].photo);
@@ -91,9 +83,6 @@ $('#left-arrow').click(() => {
 })
 
 
-
-
-
 imagesData.forEach((item, index) => {
     $('#thumbnails-container').append(`<div class="thumbnail thumb${index}" data-index="${index}" style="background: url('${item.photo}') no-repeat center center; background-size: cover;"> </div>`);
 
@@ -102,8 +91,8 @@ imagesData.forEach((item, index) => {
 $('.thumbnail').click((event) => {
     clicked = $(event.target).attr('data-index');
     loadPhoto(clicked);
-    $(event.target).addClass('clicked');
-    $(event.target).siblings().removeClass('clicked');
+    //$(event.target).addClass('clicked');
+    //$(event.target).siblings().removeClass('clicked');
     currentPhoto = $(event.target).attr('data-index');
 
 });

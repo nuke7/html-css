@@ -61,10 +61,12 @@ let imagesData = [{
 let currentPhoto = 0;
 $('#photo').attr('src', imagesData[currentPhoto].photo);
 
-let loadPhoto = (photoNumber) => {
+function loadPhoto(photoNumber) {
     $('#photo').attr('src', imagesData[photoNumber].photo);
-    // ...
-}
+    $('.clicked').toggleClass('clicked');
+    $(`.thumb${photoNumber}`).toggleClass('clicked');
+
+};
 
 loadPhoto(currentPhoto);
 
@@ -93,7 +95,7 @@ $('#left-arrow').click(() => {
 
 
 imagesData.forEach((item, index) => {
-    $('#thumbnails-container').append(`<div class="thumbnail" data-index="${index}" style="background: url('${item.photo}') no-repeat center center; background-size: cover;"> </div>`);
+    $('#thumbnails-container').append(`<div class="thumbnail thumb${index}" data-index="${index}" style="background: url('${item.photo}') no-repeat center center; background-size: cover;"> </div>`);
 
 });
 
@@ -102,9 +104,6 @@ $('.thumbnail').click((event) => {
     loadPhoto(clicked);
     $(event.target).addClass('clicked');
     $(event.target).siblings().removeClass('clicked');
-    // indexClicked is now a string! if you need it as a number you have to change it
-    // because for example "1" + 1 is going to be "11" and not 2
-    //let numberIndex = parseInt(indexClicked);
-    // now numberIndex is a number
-    $('#clicked').text(imagesData[indexClicked]);
+    currentPhoto = $(event.target).attr('data-index');
+
 });
